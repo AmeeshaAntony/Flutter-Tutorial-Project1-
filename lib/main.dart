@@ -3,9 +3,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:project1/home.dart';
+//import 'package:flutter/material.dart';
 
-main()
-{
+main(){
   runApp(MyApp());
 
 }
@@ -20,14 +21,14 @@ class MyApp extends StatelessWidget {
         primaryColor: Colors.blueGrey
         
       ),
-      home:HomeScreen(),
+      home:Home(),
     );
   }
 }
 
 
 
-class HomeScreen extends StatelessWidget {
+/*class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
   @override
@@ -121,4 +122,81 @@ class HomeScreen extends StatelessWidget {
     );
     
   }
+}*/
+
+/*class HomeScreen extends StatelessWidget {
+   HomeScreen({super.key});
+  final _textController = TextEditingController();
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+
+      body: SafeArea(
+        child: Padding(
+          //padding: EdgeInsets.all(30),//padding from all sides
+          padding: EdgeInsets.only(left: 20,right: 20),//specified sides only
+          child: Container(
+            color: Colors.orangeAccent,
+            child: Column(children: [
+                                        TextField(
+                                        controller: _textController,
+                                        cursorColor: Colors.blueGrey,
+                                        decoration: InputDecoration(
+                                          border: OutlineInputBorder(),//border for text field at top
+                                          hintText: 'Type Something'
+                                        ),
+                                       ),
+                                      ElevatedButton(onPressed: (){
+                                          print(_textController.text);
+                                      }, child: Text('Click here'),),
+                                      Text('Clicked Successfully'),
+                                  ],
+                        ),
+          ),
+        ),
+      ),
+                  );
+              }
+  }*/
+
+  /*class HomeScreen extends StatefulWidget {
+   HomeScreen({super.key});
+
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
 }
+
+class _HomeScreenState extends State<HomeScreen> {
+  final _textController = TextEditingController();
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+
+      body: SafeArea(
+        child: Padding(
+          //padding: EdgeInsets.all(30),//padding from all sides
+          padding: EdgeInsets.only(left: 20,right: 20),//specified sides only
+          child: Container(
+            color: Colors.orangeAccent,
+            child: Column(children: [
+                                        TextField(
+                                        controller: _textController,
+                                        cursorColor: Colors.blueGrey,
+                                        decoration: InputDecoration(
+                                          border: OutlineInputBorder(),//border for text field at top
+                                          hintText: 'Type Something'
+                                        ),
+                                       ),
+                                      ElevatedButton(onPressed: (){
+                                          print(_textController.text);
+                                      }, child: Text('Click here'),),
+                                      Text('Clicked Successfully'),
+                                  ],
+                        ),
+          ),
+        ),
+      ),
+                  );
+              }
+}*/
