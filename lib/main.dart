@@ -3,10 +3,14 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:project1/home.dart';
+import 'package:project1/screen1.dart';
+import 'package:project1/screen2.dart';
+import 'package:project1/list.dart';
 //import 'package:flutter/material.dart';
 
+
 main(){
+  //SharedPreferences.getinstance();
   runApp(MyApp());
 
 }
@@ -21,7 +25,16 @@ class MyApp extends StatelessWidget {
         primaryColor: Colors.blueGrey
         
       ),
-      home:Home(),
+      home:MyWidget(),
+      /*routes: {
+        'screen_1':(abc){
+          return Screen1();
+        },//calling screen1
+        
+        'screen_2':(abc){
+          return Screen2();
+        }
+      },*/
     );
   }
 }
